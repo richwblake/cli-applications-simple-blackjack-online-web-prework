@@ -55,7 +55,7 @@ def run_blackjack
   hand = initial_round
 
   loop do
-    hand += hit?( hand )
+    hand = hit?( hand )
     display_card_total( hand )
     break if hand > 21
   end
