@@ -50,7 +50,7 @@ def invalid_command
 end
 
 # runner method runs methods present
-def run_blackjack
+def runner
   welcome
   hand = initial_round
 
