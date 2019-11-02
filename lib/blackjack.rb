@@ -33,10 +33,11 @@ def hit?( card_total )
     prompt_user
     input = get_user_input
     if input == 'h'
-      return card_total + deal_card
+      return deal_card
       break
     end
     if input == 's'
+      return 0
       break
     end
     invalid_command
@@ -48,11 +49,16 @@ def invalid_command
   puts "Please enter a valid command"
 end
 
-#####################################################
-# get every test to pass before coding runner below #
-#####################################################
+# runner method runs methods present
+def run_blackjack
+  welcome
+  hand = initial_round
 
-def runner
-  
+  loop do
+    hand += hit?( hand )
+    display_card_total( hand )
+    break if hand > 21
+  end
+  end_game( hand )
 end
     
