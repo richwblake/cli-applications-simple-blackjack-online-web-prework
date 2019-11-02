@@ -37,7 +37,7 @@ def hit?( card_total )
       break
     end
     if input == 's'
-      nil
+      puts "entered s if"
       break
     end
     invalid_command
